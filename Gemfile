@@ -33,8 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'haml-rails', '~> 0.9'
 gem 'devise'
 gem 'mongoid', '~> 6.1.0'
+gem 'font-awesome-rails'
+gem 'mongoid-paperclip', require: 'mongoid_paperclip'
+gem 'ckeditor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Articles - free & premium articles
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    %meta{:content => "#2a2b2f", :name => "theme-color"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Poppins:400,600,300%7COpen+Sans:400,300,700", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = render partial: 'shared/header'
+    = render partial: 'shared/slider'
+    = yield
+    = render partial: 'shared/newsletter'
+    = render partial: 'shared/footer'

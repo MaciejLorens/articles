@@ -1,0 +1,16 @@
+.page-section.nl-cont
+  .container
+    .col-sm-8
+      %h2.section-title2.font-light.pr-0.nl-title Newsletter
+    .col-sm-4
+      .relative
+        #mc_embed_signup.nl-form-container.clearfix
+          %form#mc-embedded-subscribe-form.newsletterform.validate{:action => "http://abcgomel.us9.list-manage.com/subscribe/post-json?u=ba37086d08bdc9f56f3592af0&id=e38247f7cc&c=?", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+            / EDIT THIS ACTION URL (add "post-json?u" instead of "post?u" and appended "&c=?" to the end of this URL)
+            %input#mce-EMAIL.email.nl-email-input{:name => "EMAIL", :placeholder => "Email address", :required => "", :type => "email", :value => ""}/
+            / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            %div{:style => "position: absolute; left: -5000px;"}
+              %input{:name => "b_ba37086d08bdc9f56f3592af0_e38247f7cc", :tabindex => "-1", :type => "text", :value => ""}/
+            %button#mc-embedded-subscribe.nl2-btn{:name => "subscribe", :type => "submit"}
+              %span.icon.icon-arrows-slim-right
+          #notification_container

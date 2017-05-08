@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Category.destroy_all
+
+all = Category.create(title: 'All')
+
+all.children.create(title: 'Art and Entertainment')
+all.children.create(title: 'Cars and Other Vehicles')
+all.children.create(title: 'Computers and Electronics')
+all.children.create(title: 'Education and Communications')
+all.children.create(title: 'Family Life')
+all.children.create(title: 'Finance and Business')
+all.children.create(title: 'Food and Entertaining')
+health = all.children.create(title: 'Health')
+  health.children.create(title: 'Diets')
+  health.children.create(title: 'Diseases')
+  health.children.create(title: 'Exercises')
+all.children.create(title: 'Hobbies and Crafts')
+all.children.create(title: 'Holidays and Traditions')
+all.children.create(title: 'Home and Garden')
+all.children.create(title: 'Personal Care and Style')
+all.children.create(title: 'Pets and Animals')
+all.children.create(title: 'Philosophy and Religion')
+all.children.create(title: 'Relationships')
+all.children.create(title: 'Sports and Fitness')
+all.children.create(title: 'Travel')
+all.children.create(title: 'Work World')
+all.children.create(title: 'Youth')

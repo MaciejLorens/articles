@@ -1,0 +1,37 @@
+%header#nav.header.header-1.header-black.no-transparent.mobile-no-transparent
+  .header-wrapper.bg-gray-dark
+    .container-m-30.clearfix
+      .logo-row
+        .logo-container-2
+          .logo-2
+            %a.clearfix{:href => "index.html"}
+              %img.logo-img{:alt => "Logo", :src => "/assets/theme/logo-white.png"}/
+        .menu-btn-respons-container
+          %button#menu-btn.navbar-toggle.btn-navbar.collapsed{"data-target" => "#main-menu .navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.icon_menu.hamb-mob-icon{"aria-hidden" => "true"}
+    .main-menu-container
+      .container-m-30.clearfix
+        #main-menu
+          .navbar.navbar-default{:role => "navigation"}
+            %nav.collapse.collapsing.navbar-collapse.right-1024
+              %ul.nav.navbar-nav
+                %li.parent.current
+                  %a.open-sub{:href => "#"}
+                    .main-menu-title Categories
+                  %ul.sub
+                    = render partial: 'shared/category', collection: Category.find_by(title: 'All').children
+                %li.parent
+                  %a.open-sub{:href => "#"}
+                    .main-menu-title Fav Authors
+                %li.parent
+                  %a.open-sub{:href => "#"}
+                    .main-menu-title Explore
+
+
+    %ul.cd-header-buttons
+      %li
+        %a.cd-search-trigger{:href => "#cd-search"}
+          %span
+    #cd-search.cd-search
+      %form#searchForm.form-search{:action => "page-search-results.html", :method => "get"}
+        %input#q{:name => "q", :placeholder => "Search...", :type => "text", :value => ""}/
