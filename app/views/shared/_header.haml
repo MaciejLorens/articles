@@ -15,6 +15,9 @@
           .navbar.navbar-default{:role => "navigation"}
             %nav.collapse.collapsing.navbar-collapse.right-1024
               %ul.nav.navbar-nav
+                %li.parent
+                  %a.open-sub{:href => "#"}
+                    .main-menu-title My newspaper
                 %li.parent.current
                   %a.open-sub{:href => "#"}
                     .main-menu-title Categories
@@ -22,11 +25,17 @@
                     = render partial: 'shared/category', collection: Category.find_by(title: 'All').children
                 %li.parent
                   %a.open-sub{:href => "#"}
-                    .main-menu-title Fav Authors
+                    .main-menu-title Last Added
                 %li.parent
                   %a.open-sub{:href => "#"}
-                    .main-menu-title Explore
-
+                    .main-menu-title Top Rated
+                  %ul.sub
+                    %li
+                      %a.open-sub{:href => "#"} This day
+                    %li
+                      %a.open-sub{:href => "#"} This week
+                    %li
+                      %a.open-sub{:href => "#"} This month
 
     %ul.cd-header-buttons
       %li

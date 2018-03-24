@@ -1,8 +1,3 @@
 %li.parent
   %a.open-sub{:href => "#"}
     = category.title
-  %ul.sub
-    = category.children.each do |child|
-      %li
-        %a{:href => "index.html"}
-          = child.title
